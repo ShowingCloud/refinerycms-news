@@ -42,6 +42,10 @@ module Refinery
           where(:publish_date => archive_year.beginning_of_year..archive_year.end_of_year)
         end
 
+        def by_category(category)
+          where(:category => category)
+        end
+
         def all_previous
           where(['publish_date <= ?', Time.now.beginning_of_month])
         end
@@ -65,7 +69,7 @@ module Refinery
         end
 
         def latest(limit = 10, category = 0)
-          published.where("category = ?", category).limit(limit)
+          published.by_category(category).limit(limit)
         end
 
         def live

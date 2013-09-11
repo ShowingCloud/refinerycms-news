@@ -6,6 +6,7 @@ module Refinery
       before_filter :find_news_item, :find_latest_news_items, :only => [:show]
 
       def index
+        @category = params[:category].to_i
         # render 'index'
       end
 
