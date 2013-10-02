@@ -12,6 +12,7 @@ zh-CN:
             edit: "编辑这条新闻"
             delete: "永远删除这条新闻"
             published: 已发布
+            category: 分类
           index:
             create: "添加一条新闻"
             item: 新闻
@@ -33,5 +34,7 @@ zh-CN:
         body: 正文
         publish_date: 发布时间
         expiration_date: 过期时间
+        category: 新闻分类
+        source: 新闻来源
     models:
       'refinery/news/item': 新闻条目
